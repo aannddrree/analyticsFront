@@ -1,18 +1,21 @@
 <h2>Controle de Contas</h2>
-
 <form class="example-form">
+  <div fxLayout fxLayoutAlign="center center">
+
+    <mat-card-content fxLayout="column">
     <mat-form-field class="example-full-width">
       <mat-label>Id</mat-label>
       <input matInput placeholder="Código" >
     </mat-form-field>
-
     <mat-form-field class="example-full-width">
       <mat-label>Descrição</mat-label>
       <input matInput placeholder="Descrição">
     </mat-form-field>
-  
     <mat-form-field class="example-full-width">
       <mat-label>valor</mat-label>
       <input matInput placeholder="Valor">
     </mat-form-field>
+    <button mat-raised-button color="primary">Salvar</button>
+  </mat-card-content>
+</div>
 </form>

@@ -1,0 +1,35 @@
+<mat-card-content>
+    <form class="my-form"  (ngSubmit)="onClickSaveCadastro(cadastroForm.value)">
+       <mat-form-field class="full-width">
+              <mat-label>Nome</mat-label>
+              <input  matInput  placeholder="Nome" name="nome"  formControlName="nome"  required>
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>SobreNome</mat-label>
+              <input  matInput  placeholder="SobreNome" name="sobrenome" formControlName="sobrenome">
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Endereço</mat-label>
+              <input  matInput  placeholder="Endereço" name="endereco" formControlName="endereco">
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input  matInput  placeholder="Email" name="email" formControlName="email" required>
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Senha</mat-label>
+              <input  matInput  placeholder="Senha"  name="senha" formControlName="senha" required>
+           </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Data de Nascimento</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Data de Nascimento" name="dtnascimento" formControlName="dtnascimento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+           <mat-card-actions>
+            <button type="submit" color="primary">Salvar</button>
+          </mat-card-actions>
+    </form>
+  </mat-card-content>
